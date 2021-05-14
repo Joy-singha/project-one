@@ -8,8 +8,16 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3rem;
+    font-size: 1.6rem;
 }
 
 ul li{
@@ -18,16 +26,29 @@ ul li{
 
 /* heading*/
 h1{
-    font-size: 42px;
+    font-size: 4.2rem;
     color: #fff;
+    line-height: 5rem;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+    visibility: hidden;
 }
 /* ========================= */
 /* REUSABLE COMPONENT */ 
 /* ======================== */
 
 .row{
-    max-width: 1140px; 
+    max-width: 114rem; 
     margin: 0 auto;
+}
+
+section{
+    padding: 8rem 0;
 }
 
 /* button */
@@ -36,46 +57,109 @@ h1{
 .btn:visited,
 .btn{
     background: #333;
-    border-bottom: 3px solid #000;
+    border-bottom: 0.3rem solid #000;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    padding:  10px 30px;
-    border-radius: 3px;
+    padding:  1.5rem 6rem;
+    border-radius: 0.3rem;
     display: inline-block;
-    margin-top: 45px;
+    margin-top: 4.5rem;
+    font-size: 1.6rem;
 }
+
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    height: 0.4rem;
+    background: #fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+h3{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+
+.box{
+   padding: 1%;
+}
+
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    color: #fff;
+}
+/* paragraph */
+
+p{
+    line-height: 2.5rem;
+}
+
+.little-description{
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 3rem;
+    text-align: center;
+}
+
 
 /* ===================== */
 /* HEADER SECTION */
 /* ==================== */
 
 header{
-    background: linear-gradient(#87509cde,#87509cde), url(./img/hero-bg.jpg);
+    background: linear-gradient(#87509ce3,#87509ce3), url(./img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
+    background-attachment: fixed;
     height: 85vh;
     position: relative;
 }
 
 .logo{
-    height: 35px;
+    height: 3.5rem;
     width: auto;
-    margin-top: 35px;
+    margin-top: 3.5rem;
     float: left; 
 }
 /* MAIN NEGIGATION */
 
 .main-nav{
     float: right;
-    margin-top: 46px;
+    margin-top: 4.6rem;
 }
 
 .main-nav li{
     display: inline-block;
     
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 
 .main-nav li:first-child{
@@ -88,10 +172,10 @@ header{
     text-decoration: none;
     text-transform: uppercase;
     background: #643a7900;
-    padding: 6px 16px;
-    border-radius: 3px;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0.3rem;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.6rem;
     transition: .3s;
 }
 
@@ -116,4 +200,199 @@ header{
 .btn-hero:visited{
     background: #ed7d4b;
     border-color: #c86a40;
+}
+
+
+/* ===================== */
+/* SERVICES SECTION */
+/* ==================== */
+
+.services-section{
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(#17c2a4e3, #17c2a4e3), url(./img/services-bg.jpg);;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.services-section img{
+    height: 12.6rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.services-section h2::after{
+    background: #14a58c;
+}
+
+
+/* ===================== */
+/* TEAM SECTION */
+/* ==================== */
+
+.team-section{
+    background: linear-gradient(#e7f1f8d3, #e7f1f8d3), url(./img/team-bg.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.team-section h2{
+    color: #3c4761;
+}
+.team-section h2::after{
+    background: #c8d9e5;
+}
+
+.team-member{
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.team-section h3{
+    color: #27283d;
+}
+
+.role{
+    margin-top: .5rem;
+    color: #30bae7;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+.team-section .box p{
+    color: #3c4761;
+}
+
+.social-link{
+    margin-top: 4.5rem;
+}
+
+.social-link ul li{
+    display: inline-block;
+    margin: 0 .5rem;
+}
+
+.social-link ul li a:link{
+    color: #fff;
+}
+
+.social-link ul li a:link i::before{
+    background: #bdd1d4;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: .7s;
+}
+
+.social-link ul li a:hover i::before{
+    background: #393939;
+    transform: rotate(360deg);
+}
+
+/* ===================== */
+/* SKILL SECTION */
+/* ==================== */
+
+.skill-section{
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.863),rgba(255, 255, 255, 0.863)), url(./img/skill-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.skill-section h2,
+.skill-section h3{
+    color: #3c4761;
+}
+
+.skill-section h2::after{
+    background: #dfe8ed;
+}
+
+svg.wrb-design circle{
+    stroke: #38bae7;
+}
+
+svg.html-css circle{
+    stroke: #d74680;
+}
+
+svg.graphic-design circle{
+    stroke: #15c7a8;
+}
+
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+
+
+/* ===================== */
+/* PORTFOLIO SECTION */
+/* ==================== */
+
+.portfolio-section{
+    background: linear-gradient(#ffdd99d5, #ffdd99d5), url(./img/portfolio-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    height: 125rem;
+}
+
+.portfolio-section h2{
+    color: #3c4761;
+}
+
+.portfolio-section h2::after{
+    background: #e5c37f;
+}
+
+.portfolio-filter{
+    margin: 4.5rem;
+}
+
+.portfolio-filter button{
+    background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    color: #3c4761;
+    margin: 0 0.5rem;
+    transition: 0.5s;
+}
+
+.portfolio-filter button:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0.3rem 0.5em #3c4761c2;
+}
+
+.portfolio-img{
+    width: 100%;
+    height: 30rem;
+}
+
+.portfolio-section .col:nth-child(3){
+    margin-left: 0;
+}
+
+.portfolio-section .btn-load-more{
+    background:#17c2a4;
+    border-color:#14a58c;
+}
+.portfolio-section .mixitup-control-active{
+    background: #fff;
 }
